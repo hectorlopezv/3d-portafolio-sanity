@@ -1,6 +1,6 @@
 import experiences from './experiences'
-import navLinks from './navLinks'
+import navigation from './navigation'
 import projects from './projects'
 import services from './services'
 import techs from './techs'
-export const schemaTypes = [navLinks, services, techs, experiences, projects]
+export const schemaTypes = [navigation, services, techs, experiences, projects]
