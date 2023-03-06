@@ -1,7 +1,7 @@
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Head from "next/head";
-
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Experience />
       </main>
     </>
   );

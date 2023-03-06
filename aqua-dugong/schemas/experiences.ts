@@ -17,17 +17,22 @@ export default {
       name: 'icon',
       type: 'string',
       title: 'Icon',
-      },
-      {
-        name: 'date',
-        type: 'string',
-        title: 'Date',
-      },
-      {
-        name: 'points',
-        type: 'array',
-        of: [{type: 'string'}],
-        title: 'Points',
-      },
+    },
+    {
+      name: 'iconBg',
+      type: 'string',
+      title: 'iconBg',
+    },
+    {
+      name: 'date',
+      type: 'string',
+      title: 'Date',
+    },
+    {
+      name: 'points',
+      type: 'array',
+      of: [{type: 'string'}],
+      title: 'Points',
+    },
   ],
 }
