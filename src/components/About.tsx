@@ -1,3 +1,4 @@
+import SectionWrapper from "@/hoc/SectionWrapper";
 import { fetcher } from "@/utils/fetcher";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { styles } from "@/utils/styles";
@@ -52,4 +53,4 @@ const About = () => {
     </div>
   );
 };
-export default About;
+export default SectionWrapper(About, "about");
