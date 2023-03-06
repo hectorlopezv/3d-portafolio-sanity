@@ -1,7 +1,7 @@
 export default {
   name: 'navigation',
   type: 'document',
-  title: 'navigation',
+  title: 'Navigation',
   fields: [
     {
       name: 'title',
