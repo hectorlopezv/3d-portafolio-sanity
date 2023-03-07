@@ -2,7 +2,7 @@ import { fadeIn } from "@/utils/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
-import { mobile, web } from "../assets";
+import { mobile, web } from "../../public/assets";
 const icons = {
   web,
   mobile,

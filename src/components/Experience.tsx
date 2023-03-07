@@ -8,14 +8,15 @@ import "react-vertical-timeline-component/style.min.css";
 import useSWR from "swr";
 import ExperienceCard from "./ExperienceCard";
 const Experience = () => {
-  const { data: experiences, error } = useSWR(
+  const { data: experiences = [], error } = useSWR(
     `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="experiences"]`,
     fetcher
   );
   console.log("experiences", experiences);
   if (error) return <div>Failed to load</div>;
+  if (Array.isArray(experiences)) return null;
   return (
-    <>
+    <section>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
@@ -28,7 +29,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </section>
   );
 };
 export default SectionWrapper(Experience, "work");

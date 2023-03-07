@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
-import { meta } from "../assets";
+import { meta } from "../../public/assets";
 interface IExperienceCard {
   experience: {
     title: string;

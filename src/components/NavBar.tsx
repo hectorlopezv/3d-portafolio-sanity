@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import useSWR from "swr";
-import { close, logo, menu } from "../assets/";
+import { close, logo, menu } from "../../public/assets";
 import Links from "./Links";
 
 const NavBar = () => {
