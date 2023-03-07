@@ -1,10 +1,12 @@
 import SectionWrapper from "@/hoc/SectionWrapper";
 import { fadeIn } from "@/utils/motion";
 import { styles } from "@/utils/styles";
+import emailjs from "@emailjs/browser";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { motion } from "framer-motion";
 import * as Yup from "yup";
 import EarthCanvas from "./EarthCanvas";
+
 const Contact = () => {
   return (
     <section className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -28,10 +30,19 @@ const Contact = () => {
               .required("Required"),
           })}
           onSubmit={(values: any, { setSubmitting }: any) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
+            setSubmitting(true);
+            emailjs.send(
+              process.env.EMAIL_SERVICE_ID ?? "",
+              process.env.EMAIL_TEMPLATE_ID ?? "",
+              {
+                from_name: values,
+                to_email: "hectorvmlopez@gmail.com",
+                to_name: "hector",
+                from_email: values.email,
+                message: values.message,
+              },
+              process.env.EMAIL_PUBLIC_KEY ?? ""
+            );
           }}
         >
           <Form className="mt-12 flex flex-col gap-8">

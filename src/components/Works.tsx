@@ -7,7 +7,7 @@ import useSWR from "swr";
 import ProjectCard from "./ProjectCard";
 const Works = () => {
   const { data: projects = [], error } = useSWR(
-    `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="projects"]`,
+    `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/${process.env.NEXT_PUBLIC_SANITY_API_VERSION}/data/query/${process.env.NEXT_PUBLIC_SANITY_DATASET}?query=*[_type=="projects"]`,
     fetcher
   );
   if (error) return <div>Failed to load</div>;

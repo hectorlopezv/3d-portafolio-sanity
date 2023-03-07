@@ -4,7 +4,7 @@ import useSWR from "swr";
 import BallCanvas from "./BallCanvas";
 const Techs = () => {
   const { data: techs = [], error } = useSWR(
-    `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="techs"]`,
+    `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/${process.env.NEXT_PUBLIC_SANITY_API_VERSION}/data/query/${process.env.NEXT_PUBLIC_SANITY_DATASET}?query=*[_type=="techs"]`,
     fetcher
   );
   if (error) return <div>Failed to load</div>;

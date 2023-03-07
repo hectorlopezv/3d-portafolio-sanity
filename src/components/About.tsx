@@ -7,7 +7,7 @@ import useSWR from "swr";
 import ServiceCard from "./ServiceCard";
 const About = () => {
   const { data: services, error } = useSWR(
-    `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="services"]`,
+    `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/${process.env.NEXT_PUBLIC_SANITY_API_VERSION}/data/query/${process.env.NEXT_PUBLIC_SANITY_DATASET}?query=*[_type=="services"]`,
     fetcher
   );
   if (error) return <div>Failed to load</div>;

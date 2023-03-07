@@ -11,7 +11,7 @@ export default async function handler(
   res: NextApiResponse<Data[]>
 ) {
   const data = await fetch(
-    `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="navigation"]`
+    `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/${process.env.NEXT_PUBLIC_SANITY_API_VERSION}/data/query/${process.env.NEXT_PUBLIC_SANITY_DATASET}?query=*[_type=="navigation"]`
   );
   const dataJson = await data.json();
   res.status(200).json(dataJson.result);

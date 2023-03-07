@@ -9,7 +9,7 @@ import useSWR from "swr";
 import ExperienceCard from "./ExperienceCard";
 const Experience = () => {
   const { data: experiences = [], error } = useSWR(
-    `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="experiences"]`,
+    `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/${process.env.SANITY_API_VERSION}/data/query/${process.env.NEXT_PUBLIC_SANITY_DATASET}?query[_type=="experiences"]`,
     fetcher
   );
   if (error) return <div>Failed to load</div>;
