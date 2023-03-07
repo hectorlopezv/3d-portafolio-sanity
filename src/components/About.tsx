@@ -10,7 +10,6 @@ const About = () => {
     `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="services"]`,
     fetcher
   );
-  console.log("services", services);
   if (error) return <div>Failed to load</div>;
   if (!services) return null;
   return (

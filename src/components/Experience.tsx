@@ -12,7 +12,6 @@ const Experience = () => {
     `https://gspu7iun.api.sanity.io/v1/data/query/production?query=*[_type=="experiences"]`,
     fetcher
   );
-  console.log("experiences", experiences);
   if (error) return <div>Failed to load</div>;
   if (Array.isArray(experiences)) return null;
   return (

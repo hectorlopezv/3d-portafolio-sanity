@@ -1,6 +1,8 @@
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
+import StarsCanvas from "@/components/StartsCanvas";
 import Techs from "@/components/Techs";
 import Works from "@/components/Works";
 import Head from "next/head";
@@ -20,6 +22,8 @@ export default function Home() {
         <Experience />
         <Techs />
         <Works />
+        <Contact />
+        <StarsCanvas />
       </main>
     </>
   );
