@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Techs from "@/components/Techs";
+import Works from "@/components/Works";
 import Head from "next/head";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <About />
         <Experience />
         <Techs />
+        <Works />
       </main>
     </>
   );
