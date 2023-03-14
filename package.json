@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test:e2e:open": "cypress open",
+    "test:e2e:run": "cypress run"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -19,6 +23,7 @@
     "framer-motion": "^10.0.2",
     "maath": "^0.5.2",
     "next": "13.2.3",
+    "next-auth": "^4.20.1",
     "next-sanity": "^4.1.5",
     "next-sanity-client": "^1.0.6",
     "react": "18.2.0",
@@ -31,13 +36,25 @@
     "yup": "^1.0.2"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.0-rc.3",
+    "@storybook/addon-interactions": "^7.0.0-rc.3",
+    "@storybook/addon-links": "^7.0.0-rc.3",
+    "@storybook/blocks": "^7.0.0-rc.3",
+    "@storybook/nextjs": "^7.0.0-rc.3",
+    "@storybook/react": "^7.0.0-rc.3",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "@testing-library/cypress": "^9.0.0",
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@types/react-vertical-timeline-component": "^3.3.3",
     "@types/three": "^0.149.0",
     "autoprefixer": "^10.4.13",
+    "cypress": "^12.7.0",
+    "cypress-social-logins": "^1.14.0",
+    "eslint-plugin-storybook": "^0.6.11",
     "postcss": "^8.4.21",
+    "storybook": "^7.0.0-rc.3",
     "tailwindcss": "^3.2.7"
   }
 }
